@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+background-image:url('images/slides/slide-03.jpg');
+}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=date]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=button] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.ordering-delicacy{
+font-family: Georgia, serif;
+text-align:center;
+}
+.logo-div{
+  text-align:left;
+  padding-right:15px;
+  padding-left:15px;
+  float:left;
+ 
+}
+.sub-heading-order{
+  text-align:center;
+}
+.address-example{
+opacity:0.7;
+
+
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-left:20%;
+  margin-right:20%;
+}
+.hide{
+  display:none;
+}
+.alert-box{
+  color:red;
+  text-align:center;
+}
+@media(max-width:500px){
+.container{
+    margin-left:5%;
+  margin-right:5%;
+
+}
+
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/attribute.js"></script>
+<script type="text/javascript">
+  
+  $(document).ready(function() {
+    check_plates_order();
+    // Define your variable with the numeric value
+    ordering_for();
+  });
+
+</script>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+</head>
+<body>
+
+<div class="ordering-delicacy"><div class="logo-div"><img  width="45px" height="45px" class="logo-img" src="images/khas-logo.png"></div><h3>You are ordering Delicacy <img src="images/delicacy-emoji.png" width="25px", height="25px"></h3></div>
+<div class="sub-heading-order"><p>Order as many as you want from the plates left and appreciate only when you can smell your food!! </p></div>
+<div class="container">
+  <p class="alert-box hide"></p>
+  <form id="order-form">
+    <label for="orderfor">Ordering For </label>
+    <input type="date" id="orderingdate" name="orderfor" disabled>
+    <label for="fname">Full Name</label>
+    <input type="text" id="fname" name="fullname" placeholder="Your name..">
+    <label for="phone">Phone number</label>
+    <input type="text" id="phone" name="phone" placeholder="Your valid phone number, no spaces or -">
+      <label for="add">Your Valid Address<br><p class="address-example">eg:1234 N Avery st, Chicago,IL 60009<p></p> </label>
+    <input type="text" id="add" name="address" placeholder="please copy your Valid Address from google maps for easy delivery">
+
+    <label for="area">Area</label>
+    <select id="area" name="area">
+      <option value="Devon">Devon</option>
+      <option value="Lombard">Lombard</option>
+    </select>
+
+    <label for="count">How many plates?</label>
+    <select id="count" name="count">
+     
+    </select>
+
+    <label for="comment">Special Comment</label>
+    <textarea id="comment" name="comment" placeholder="let us know if you have any comments for us relating to this order..." style="height:100px"></textarea>
+
+    <input type="button" value="Submit" class="order_submit">
+  </form>
+</div>
+
+</body>
+</html>
