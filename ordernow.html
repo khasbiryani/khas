@@ -46,17 +46,17 @@ font-family: Georgia, serif;
 text-align:center;
 }
 .logo-div{
-  text-align:left;
-  padding-right:15px;
-  padding-left:15px;
-  float:left;
+  text-align:center;
+  
+ 
  
 }
 .sub-heading-order{
   text-align:center;
+  margin-bottom:10px;
 }
 .address-example{
-opacity:0.7;
+opacity:0.5;
 
 
 }
@@ -75,12 +75,16 @@ opacity:0.7;
   color:red;
   text-align:center;
 }
+h3{
+  margin-top:5px;
+}
 @media(max-width:500px){
 .container{
     margin-left:5%;
   margin-right:5%;
 
 }
+
 
 }
 </style>
@@ -98,11 +102,14 @@ opacity:0.7;
 </script>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+  
+
 </head>
 <body>
 
-<div class="ordering-delicacy"><div class="logo-div"><img  width="45px" height="45px" class="logo-img" src="images/khas-logo.png"></div><h3>You are ordering Delicacy <img src="images/delicacy-emoji.png" width="25px", height="25px"></h3></div>
-<div class="sub-heading-order"><p>Order as many as you want from the plates left and appreciate only when you can smell your food!! </p></div>
+<div class="ordering-delicacy"><div class="logo-div"><img  width="100px" height="100px" class="logo-img" src="images/khas-logo.png"></div>
+<h3 style="margin-top:5px;color:white;">You are ordering Delicacy <img src="images/delicacy-emoji.png" width="25px", height="25px"></h3></div>
+<div class="sub-heading-order">Order as many as you want from the plates left and appreciate only when you can smell your food!!</div>
 <div class="container">
   <p class="alert-box hide"></p>
   <form id="order-form">
@@ -111,13 +118,16 @@ opacity:0.7;
     <label for="fname">Full Name</label>
     <input type="text" id="fname" name="fullname" placeholder="Your name..">
     <label for="phone">Phone number</label>
-    <input type="text" id="phone" name="phone" placeholder="Your valid phone number, no spaces or -">
-      <label for="add">Your Valid Address<br><p class="address-example">eg:1234 N Avery st, Chicago,IL 60009<p></p> </label>
-    <input type="text" id="add" name="address" placeholder="please copy your Valid Address from google maps for easy delivery">
+    <input type="text" id="phone" name="phone" maxlength="10" placeholder="Your valid phone number.." onkeypress='phonevalidate(event)'>
+      <label for="add">Your Valid Address<br></label>
+    <input type="text" id="add" name="address" placeholder="please copy your Valid Address from google maps for easy delivery..">
 
     <label for="area">Area</label>
     <select id="area" name="area">
       <option value="Devon">Devon</option>
+      <option value="desplanes">Desplanes</option>
+      <option value="Mt prospect">Mt Prospect</option>
+      <option value="Niles">Niles</option>
       <option value="Lombard">Lombard</option>
     </select>
 
@@ -126,7 +136,7 @@ opacity:0.7;
      
     </select>
 
-    <label for="comment">Special Comment</label>
+    <label for="comment">Special Delivery Comments</label>
     <textarea id="comment" name="comment" placeholder="let us know if you have any comments for us relating to this order..." style="height:100px"></textarea>
 
     <input type="button" value="Submit" class="order_submit">

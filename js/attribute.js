@@ -203,7 +203,7 @@ $(".order_submit").click(function(){
         if (!alertBox.classList.contains("hide")) {
             alertBox.classList.add('hide');
           }
-          let dataDump = orderingDate.value.trim()+"$"+fname.value.trim()+"$"+phone.value.trim()+"$"+address.value.trim()+"$"+area.value.trim()+"$"+count.value.trim()+"$"+document.getElementById("comment").value.trim();
+          let dataDump = orderingDate.value.trim()+"$"+removeSpecialCharsRegex(fname.value.trim())+"$"+phone.value.trim()+"$"+removeSpecialCharsRegex(address.value.trim())+"$"+area.value.trim()+"$"+count.value.trim()+"$"+removeSpecialCharsRegex(document.getElementById("comment").value.trim());
       // Optionally add further processing or validation here
       put_data_dump(dataDump)
       .then(res => {
@@ -268,3 +268,86 @@ function put_data_dump(dataDump){
         xhr.send();
       });
 }
+function update_visit_count(){
+    return new Promise((resolve, reject) => {
+        // Create the AJAX request
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://khasbiryani.000webhostapp.com/update_visit_count.php", true);
+    
+        // Handle response received
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              // Parse and resolve with extracted value
+              // console.log(xhr.responseText);
+              let res= xhr.responseText; // assuming JSON response
+              resolve(res);
+            } else {
+              // Reject with error information
+              reject(new Error("Error fetching data: " + xhr.statusText));
+            }
+          }
+        };
+    
+        // Send the request
+        xhr.send();
+      });
+}
+
+function update_days_left(){
+    getOrderDate()
+    .then(orderingDate => {
+        console.log(orderingDate);
+        // const today = new Date();
+        // today.setHours(0, 0, 0, 0); // Set to midnight to avoid time difference issues
+        // const orderingDateObj = new Date(orderingDate);
+        // orderingDateObj.setHours(0, 0, 0, 0); // Same for ordering date
+      
+        // // Convert to milliseconds and calculate difference
+        // const todayMillis = today.getTime();
+        // const orderingDateMillis = orderingDateObj.getTime();
+        // const diffInMilliSeconds = orderingDateMillis - todayMillis;
+      
+        // // Convert milliseconds to days (rounded down) and return
+        // const daysLeft = Math.floor(diffInMilliSeconds / (1000 * 60 * 60 * 24));
+        document.getElementById("days_counter").innerHTML = orderingDate;
+      
+    })
+    .catch(error => {
+      console.error("Error retrieving orderingDate:", error);
+    });
+
+}
+function visit_count(){
+update_visit_count()
+.then(visitCount => {
+    document.getElementById("visits").innerHTML = visitCount;
+  console.log(visitCount);
+})
+.catch(error => {
+  console.error("Error retrieving orderingDate:", error);
+});
+}
+
+function removeSpecialCharsRegex(str) {
+    const regex = /[^a-zA-Z0-9 ,-]/g; // Match any character that's not a letter, number, or space
+    return str.replace(regex, ''); // Replace matches with an empty string
+  }
+
+  function phonevalidate(evt) {
+    var theEvent = evt || window.event;
+  
+    // Handle paste
+    if (theEvent.type === 'paste') {
+        key = event.clipboardData.getData('text/plain');
+    } else {
+    // Handle key press
+        var key = theEvent.keyCode || theEvent.which;
+        key = String.fromCharCode(key);
+    }
+    var regex = /[0-9]|\./;
+    if( !regex.test(key) ) {
+      theEvent.returnValue = false;
+      if(theEvent.preventDefault) theEvent.preventDefault();
+    }
+  }

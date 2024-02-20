@@ -169,7 +169,9 @@ textarea {
 	margin: 0;  /* 2 */
 }
 .order-now-btn{
-	border-radius:3px ;
+	border-radius:3px;
+	background-color: #8dc63f;
+	color:white;
 	padding:15px;
 	transition: .3s;
 	}
@@ -179,6 +181,9 @@ background-color: #8dc63f;
 color:white;
 padding:15px;
 transition: .3s;
+}
+.last-order-time{
+	color:white;
 }
 /* Show the overflow in IE.
  * 1. Show the overflow in Edge. */
@@ -197,7 +202,9 @@ select {
 	/* 1 */
 	text-transform: none;
 }
-
+p{
+	text-align: justify;
+}
 /* Correct the inability to style clickable types in iOS and Safari. */
 button,
 [type="button"],

@@ -31,6 +31,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
     <link rel="manifest" href="site.webmanifest">
 
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 
 <body id="top">
@@ -56,8 +57,10 @@
         </div>
 
         <div class="header-email">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 12l11 3.1 7-8.1-8.156 5.672-4.312-1.202 15.362-7.68-3.974 14.57-3.75-3.339-2.17 2.925v-.769l-2-.56v7.383l4.473-6.031 4.527 4.031 6-22z"/></svg>
-            <a href="mailto:#0">khasbiryani@gmail.com</a>
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 12l11 3.1 7-8.1-8.156 5.672-4.312-1.202 15.362-7.68-3.974 14.57-3.75-3.339-2.17 2.925v-.769l-2-.56v7.383l4.473-6.031 4.527 4.031 6-22z"/></svg> -->
+            
+<i class='fas fa-phone' style='font-size:36px;color:#8dc63f;margin-bottom:5px;'></i>
+<a href="tel:224-587-8359" style="color:white;">+1 224-587-8359</a>
         </div>
 
     </header> <!-- end s-header -->
@@ -89,7 +92,7 @@
                     
                     <h1>
                     Get ready for very Authentic, <br>
-                    Real Hyderabadi Biryani! <br>
+                    Real Hyderabadi Nawabi Biryani! <br>
                     Limited plates every <br>
                     Saturday Lunch.
                     </h1>
@@ -99,30 +102,22 @@
                         <h2>Plates Left: <p id="plates-left" class="plates-left"></p><svg class='refresh-img' onclick="update_plates_left()" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
                             <g fill-opacity="0.54118" fill="#04a806" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M7.59375,3l1.46875,2h3.9375c3.32422,0 6,2.67578 6,6v4h-3l4,5.46875l4,-5.46875h-3v-4c0,-4.40625 -3.59375,-8 -8,-8zM4,3.53125l-4,5.46875h3v4c0,4.40625 3.59375,8 8,8h5.40625l-1.46875,-2h-3.9375c-3.32422,0 -6,-2.67578 -6,-6v-4h3z"></path></g></g>
                             </svg>   </h1>                 </div>
-                <div class="intro-content__bottom">
-
+                            <P class="last-order-time">Last taking orders till Friday 8pm CST.</P>
+                            
                     <div class="intro-content__counter-wrap">
-                        <h4>Next Delivery in</h4>
+                        <h4>Next Delivery on</h4>
             
                         <div class="counter">
-                            <div class="counter__time days">
-                                04
-                                <span>D</span>
+                            <div class="counter__time days" >
+                                <span id="days_counter">00</span>
+                                
+                                <!-- <span>Days</span> -->
                             </div>
-                            <div class="counter__time hours">
-                                00
-                                <span>H</span>
-                            </div>
-                            <div class="counter__time minutes">
-                                00
-                                <span>M</span>
-                            </div>
-                            <div class="counter__time seconds">
-                                00
-                                <span>S</span>
-                            </div>
+                            
                         </div>  <!-- end counter -->
                     </div> <!-- end intro-content__counter-wrap -->
+                <div class="intro-content__bottom">
+                    
 
                     <!-- <div class="intro-content__notify">
                         <button type="button" class="btn--stroke btn--small modal-trigger">
@@ -185,25 +180,50 @@
             <div class="column">
 
                 <div id="tab-services" class='tab-content__item'>
-
+                    <br>
                     <!-- 01. tab about -->
                     <div id="tab-content" class='tab-content__item'>
                         
                         <div class="row">
                             <div class="column">
-                                <div class="row tab-content__item-header">
+                                <div >
                                 <h1>
                                 About our Biryani.
                                 </h1>
                                 </div>
 
                                 <p class="lead">
-                                    Indulge in our Mutton Biryani, crafted with fresh, never-frozen, high-quality Zabiha Halal lamb leg meat, meticulously trimmed for leanness. Fragrant basmati rice, infused with the rich aroma of Desi ghee, creates a symphony of flavors that will tantalize your taste buds. Please be aware that our dishes may contain nuts and dairy.
+                                    Indulge in our Mutton Biryani, crafted with fresh, never-frozen, high-quality Zabiha Halal lamb leg meat, meticulously trimmed for leanness. Fragrant basmati rice, infused with the rich aroma of Desi ghee, creates a symphony of flavors that will tantalize your taste buds. Please be aware that our dishes may contain nuts and dairy. we will soon increase the number of order we take. 
                                 </p>
 
                                 
                                 </div>
                             </div>
+
+                            <div class="row tab-content__item-header">
+                                <div class="column">
+                                    <h1>Order us?</h1>
+                                </div>
+                            </div>
+
+                            <p class="lead">
+                                Ordering us is as simple as it gets.
+                                <div style="color:#0a3e11;font-family:'Gothic A1', sans-serif;font-size:2rem;font-weight:500;" >
+                                <li>We post available plates to order on this site and on facebook/Whatsapp groups every wednesday.</li>    
+                                <li>Click on order now on this site and fill up small form. </li>
+                                <li>Your valid phone number & address for seamless delivery.</li>
+                                <li>select area of delivery and number of plates you would like to order and hit submit.</li>
+                                <li>That's it! Your order is received with us.</li>
+
+                                <li>OR, You can also Text or call us on <a href="sms:+1224-587-8359">+1 224-587-8359</a> to make an order.</li>
+                                
+                                
+                                </div>
+                                <br> 
+                                <p class="lead">We will give you a confirmation of your order via text message as soon as we confirm your address on google maps.
+                                    Remember, orders with invalid address or phone number will be cancelled without any update. Then, on saturday while you are craving for lunch we bring the delicacy to your door step. you only have to appreciate us when you smell the food!!</p>
+                            </p>
+
 
                         <div class="row tab-content__item-header">
                             <div class="column">
@@ -217,12 +237,12 @@
                                 Khaja's Hyderabadi Authentic'S biryani.
                                 </p>
 
-                                <p>
+                                <p class="lead">
                                     We're thrilled to announce that after careful consideration, we're excited to bring the authentic taste of Hyderabadi Biryani to Chicago! Like many of you, we've sampled biryanis from various places across the USA, especially in Chicago and its suburbs. After much anticipation, we believe now is the perfect moment to introduce the Nawabi-style Biryani that Chicago has been yearning for.<br><br>
 
-                                    We understand that this may not be for everyone, but for those special individuals who miss the taste of Hyderabadi biryani from back home, this is a culinary delight not to be missed. Our head chef, Mohammed Khaja, has tirelessly experimented with hundreds of biryani variations to capture the essence of the OG Nawabi taste. Finally, after much dedication and refinement, he has perfected his secret recipe, bringing the traditional Hyderabadi biryani straight to the plates of everyone here in Chicago.<br>
+                                    We understand that this may not be for everyone, but for those special individuals who miss the taste of Nawabi Hyderabadi biryani from back home, this is a culinary delight not to be missed. Our head chef, Mohammed Khaja, has tirelessly experimented with hundreds of biryani variations to capture the essence of the OG Nawabi taste. Finally, after much dedication and refinement, he has perfected his secret recipe, bringing the traditional Nawabi Hyderabadi biryani straight to the plates of everyone here in Chicago.<br>
                                     
-                                    Get ready to indulge in the rich flavors and aromatic spices of Hyderabadi Biryani like never before! Stay tuned for updates on our launch date and where you can experience this culinary masterpiece firsthand.
+                                    <a href="ordernow.html">Click here</a> to Order the OG Hyderabadi Nawabi Biryani!!!
                                 </p>
 
                                 
@@ -237,30 +257,27 @@
                     <!-- 03. tab contact -->
                     <div id="tab-contact" class="tab-content__item">
 
-                        <div class="row tab-content__item-header">
-                            <div class="column">
-                                <h1>Order us?</h1>
-                            </div>
-                        </div>
+                        
 
                         <div class="row">
                             <div class="column">
-                                <p class="lead">
-                                    Ordering us is as simple as it gets, we post available plates to order on this site and on facebook on every wednesday. click on order now on this site and fill up small form and dont forget to give your valid phone number & address for seamless delivery. we will give you a confirmation of your order via text message as soon as we confirm your address on google maps. Remember, orders with invalid address or phone number will be cancelled without any update. Then, on saturday while you are craving for lunch we bring the delicacy to your door step. you only have to appreciate us when you smell the food!!
-                                </p>
+                               
 
                                 <div class="row">
                                     <div class="column large-six tab-full">
-                                        <h4>currently taking orders for</h4>
+                                        <h4>currently taking orders for delivery near</h4>
                 
                                         <p>
-                                        Devon<br>
-                                        Lombard<br>
+                                        <li>Mt prospect.(1-2pm)</li>
+                                        <li>Desplanes.(1:30-2:30pm)</li>
+                                        <li>Niles.(2-3pm)</li>
+                                        <li>Devon St.(2-3pm)</li>
+                                        <li>Lombard.(4-5pm)</li>
                                         </p>
                 
                                     </div>
                 
-                                    <div class="column large-six tab-full">
+                                    <!-- <div class="column large-six tab-full">
                                         <h4>Follow Us</h4>
                 
                                         <ul class="link-list">
@@ -268,14 +285,16 @@
                                             <li><a href="#0">Instagram</a></li>
                                         </ul>
                 
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <p class="tab-content__item-bottom">
-                                    <a href="mailto:#0" class="contact-email">khasbiryani@gmail.com</a>
+                                    <a href="sms:+1224-587-8359" class="contact-email">+1 224-587-8359</a>
+                                   
                                     <span class="contact-number"> 
-                                        <a href="tel:224-587-8359">+1 224-587-8359</a>
+                                        <a href="mailto:#0" >khasbiryani@gmail.com</a>
                                     </span>
+                                    <p>This weeks Zabiha halal meat is bought from <a href="https://maps.app.goo.gl/j3UJsAH8FNb4JQkx7">Shamieram Meat Market</a>. you can find the hand slaughtered Zabiha Halal certificates in their store. </p>
                                 </p>
 
                             </div>
@@ -284,7 +303,8 @@
                     </div> <!-- end 03. tab contact -->
                     <div class="ss-copyright">
                         <span>© Copyright  2024</span> 
-                        <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                        <span>Design inspired by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                        <span id="visits">...</div>
                     </div>
                 </div> <!-- end tab content -->
 
@@ -317,8 +337,10 @@
     // Your code to be executed when the DOM is ready
     // plates_left();
     update_plates_left();
-  });
-  
+    update_days_left();
+    visit_count();
+        });
+ 
     </script>
 
 </body>

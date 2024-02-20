@@ -1849,7 +1849,7 @@ input::-moz-focus-inner {
 .intro-content__text h2 {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 1.2;
   color: #f7dac3;
   letter-spacing: normal;
@@ -2549,8 +2549,8 @@ html.no-csstransitions .intro-content__bottom {
  *
  * ------------------------------------------------------------------- */
 .s-info {
-  padding-top: 16rem;
-  padding-bottom: 8rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
   background-color: #ffffff;
   position: relative;
 }
@@ -2577,8 +2577,8 @@ html.no-csstransitions .intro-content__bottom {
 .s-info::before {
   display: block;
   content: "";
-  width: 35%;
-  height: 35%;
+  width: 15%;
+  height: 15%;
   background-color: #ffffff;
   opacity: .5;
   background-repeat: no-repeat;
@@ -2889,7 +2889,7 @@ html.no-csstransitions .intro-content__bottom {
 
 @media screen and (max-width:600px) {
   .s-info {
-    padding-top: 12rem;
+    padding-top: 0rem;
   }
 
   .tab-nav__list {
@@ -2909,7 +2909,7 @@ html.no-csstransitions .intro-content__bottom {
 
 @media screen and (max-width:500px) {
   .s-info {
-    padding-top: 9.6rem;
+    padding-top: 0rem;
   }
 
   .s-info .vert-line {
@@ -2924,6 +2924,10 @@ html.no-csstransitions .intro-content__bottom {
     height: 4.8rem;
     width: 4.8rem;
     line-height: 4.8rem;
+  }
+  .s-info::before{
+    height:10%;
+    width:10%;
   }
 
 }
